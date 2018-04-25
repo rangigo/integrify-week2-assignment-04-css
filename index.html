@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Web Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+  <div class='form-container'>
+    <header>
+      <h1>Let's talk</h1>
+      <span>Think you have what it takes? Show us</span>
+    </header>
+    <div class='form'>
+      <section class='personal-info'>
+        <header>
+          <h4>1. Personal information</h4>
+        </header>
+        <div class='flex-box'>
+          <div class='flex-75'>
+            <input name='name' type="text" required>
+            <label for='name'>Full name*</label>
+          </div>
+          <div class='flex-25'>
+            <input name='phone' type="text" required>
+            <label for='phone'>Phone</label>
+          </div>
+          <div class='flex-75'>
+            <input name='email' type="text" required>
+            <label for='email'>Email*</label>
+          </div>
+          <div class='flex-75'>
+            <input name='reemail' type="text" required>
+            <label for='reemail'>Re-enter email*</label>
+          </div>
+          <div class='flex-100'>
+            <textarea rows='2' name='address' required></textarea>
+            <label for='address'>Address*</label>
+          </div>
+          <div class='flex-25'>
+            <input name='city' type="text" required>
+            <label for='city'>City</label>
+          </div>
+          <div class='flex-25'>
+            <input name='state' type="text" required>
+            <label for='state'>State</label>
+          </div>
+          <div class='flex-25'>
+            <input name='ctry' type="text" required>
+            <label for='ctry'>Country/Region*</label>
+          </div>
+          <div class='flex-25'>
+            <input name='zip' type="text" required>
+            <label for='zip'>Zip/PostalCode</label>
+          </div>
+          <div class='flex-100'>
+            <input type='text' name='hear' required>
+            <label for='hear'>How did you hear about us</label>
+          </div>
+        </div>
+      </section>
+      <section class='skills-location'>
+        <header>
+          <h4>2. Skills and location</h4>
+        </header>
+        <div class='skills-grid-box'>
+          <div class='discipline'>
+            <span>Which is your primary discipline?*</span>
+            <div class='flex-box'>
+              <div class='flex-25 active'>
+                <input type="radio" value='dr'>Design Research</div>
+              <div class='flex-25'>
+                <input type="radio" value='vd'>Visual Design</div>
+              <div class='flex-25'>
+                <input type="radio" value='uxd'>UX Design</div>
+              <div class='flex-25'>
+                <input type="radio" value='fed'>Front-end Dev</div>
+              </ul>
+            </div>
+          </div>
+          <div class='discipline-exp'>
+            <span>Do you have experience with any other disciplines?</span>
+            <div class='flex-box'>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Visual Design
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>UX Design
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Front-end Development
+                <span class="checkmark"></span>
+              </div>
+            </div>
+          </div>
+          <div class='locations'>
+            <span>Where are you interested in working?*</span>
+            <p>You must be legally authorized to work without visa sponsorship in the locations you choose</p>
+            <div class='flex-box'>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Austin, Texas
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>New York, New York
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Toronto, Canada
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Shanghai, China
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Dublin, Ireland
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Hursley, United Kingdom
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Boeblingen, Germany
+                <span class="checkmark"></span>
+              </div>
+              <div class='flex-100'>
+                <input type="checkbox" value='dr'>Somewhere else
+                <span class="checkmark"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='portfolio'>
+        <header>
+          <h4>3. Portfolio</h4>
+        </header>
+        <div class='flex-box'>
+          <span>Prove you're IBM's next great designer by showing us who you are. What you've done. How you think. Tell us your
+            story
+          </span>
+          <div class='flex-100'>
+            <input type='text' name='portfolio-link' required>
+            <label for='portfolio-link'>Portfolio link*</label>
+          </div>
+          <div class='flex-100 etc'>
+            <textarea rows='8' name='etc' placeholder="Anything else (another link, availability, etc.)?"></textarea>
+          </div>
+          <button class='submit-button'>Submit</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

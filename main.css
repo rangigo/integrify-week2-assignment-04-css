@@ -1,0 +1,272 @@
+body {
+  background-color: #454d56;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-container > header {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+.form-container > header h1 {
+  margin-bottom: 0.5em;
+}
+
+.form-container > header span {
+  font-size: 0.8em;
+  color: #ced0d3;
+}
+
+.form section > header {
+  font-size: 1.2em;
+  color: white;
+  border-bottom: 2px solid #00b1f2;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-flow: row wrap;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.flex-box label {
+  color: #b8c1c1;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 1.3em;
+  transition: 0.2s ease all;
+}
+
+.flex-box input {
+  background-color: #454d56;
+  border-bottom: 1px solid #6f7878;
+  border-left: 1px solid #454d56;
+  border-right: 1px solid #454d56;
+  border-top: 1px solid #454d56;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 300;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  padding: 12px 20px;
+  transition: 0.2s ease all;
+  width: 100%;
+}
+
+.flex-box input:focus,
+.flex-box textarea:focus,
+.flex-box input:valid,
+.flex-box textarea:valid {
+  border: 1px solid #047cc0;
+  outline: none;
+  transition: all 0.25s linear;
+  background-color: #272727;
+  background-image: none;
+}
+
+.flex-box input:focus ~ label,
+.flex-box textarea:focus ~ label,
+.flex-box input:valid ~ label,
+.flex-box textarea:valid ~ label {
+  background-color: #272727;
+  border-left: 1px solid #047cc0;
+  border-right: 1px solid #047cc0;
+  border-top: 1px solid #047cc0;
+  color: #95c4f3;
+  font-size: 0.6em;
+  margin: -1px 0 0 0;
+  padding: 0.5em 0.5em 0 0.5em;
+  top: -1.3em;
+}
+
+.flex-box textarea {
+  color: white;
+  resize: none;
+  background-color: #454d56;
+  width: 95%;
+  padding: 12px 20px;
+  border: none;
+  background-image: linear-gradient(transparent, transparent 49px, #6f7878 0px);
+  background-size: 100% 50px;
+  line-height: 50px;
+  margin-bottom: 0.9em;
+  font-size: 1.3em;
+}
+
+.flex-75 {
+  width: 73%;
+  position: relative;
+}
+
+.flex-25 {
+  width: 23%;
+  position: relative;
+}
+
+.flex-100 {
+  width: 100%;
+  position: relative;
+}
+
+.skills-grid-box {
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b c";
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px 0;
+  padding: 10px 0;
+  color: white;
+}
+
+.discipline {
+  grid-area: a;
+}
+
+.discipline .flex-box > div {
+  border: 1.5px solid white;
+  padding: 15px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.discipline .flex-box > div input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.discipline .flex-box > div:hover {
+  background-color: #ccc;
+}
+
+.discipline .flex-box > div.active {
+  background-color: #00b1f2;
+  border: 1.5px solid #00b1f2;
+}
+
+.discipline-exp {
+  grid-area: b;
+  padding-right: 25px;
+}
+
+.discipline-exp .flex-box > div {
+  padding-left: 2em;
+  margin: 5px 0;
+}
+
+.flex-box div input[type='checkbox'] {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  left: 0; top: 0;
+  z-index: 99;
+}
+
+.flex-box div .checkmark {
+  position: absolute;
+  top: -0.2em;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #6f7878;
+}
+
+.flex-box div:hover input[type='checkbox'] ~ .checkmark {
+  background-color: #ccc;
+}
+
+.flex-box div input[type='checkbox']:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.flex-box div .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.flex-box div input[type='checkbox']:checked ~ .checkmark:after {
+  display: block;
+}
+
+.flex-box div .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.locations {
+  grid-area: c;
+}
+
+.locations .flex-box > div {
+  padding-left: 2em;
+  margin: 5px 0;
+}
+
+.locations p {
+  font-size: .9em;
+  color: #b8c1c1;
+}
+
+.portfolio {
+  color: white;
+}
+
+.portfolio > .flex-box span {
+  margin-bottom: 25px;
+}
+
+.portfolio > .flex-box > div.etc > textarea {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #6f7878;
+  background: none;
+  resize: both;
+  line-height: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+.portfolio > .flex-box > div.etc > textarea:focus, 
+.portfolio > .flex-box > div.etc > textarea:valid {
+  border: 1px solid #6f7878;
+  background: none;
+  line-height: 1em;
+  width: 100%;
+  height: 100%;
+}
+   */
+
+.submit-button {
+  margin: 4em 0;
+  border: none;
+  background-color: #00b1f2;
+  color: white;
+  height: 50px; width: 150px;
+  cursor: pointer;
+  font-size: 1em;
+}
